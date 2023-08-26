@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "16429119",
+      "name": "后台管理-系统管理",
+      "font_class": "houtaiguanli-xitongguanli",
+      "unicode": "e6db",
+      "unicode_decimal": 59099
+    },
+    {
       "icon_id": "1808724",
       "name": "头像",
       "font_class": "icon-test",
