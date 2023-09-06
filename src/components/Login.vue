@@ -59,15 +59,15 @@ export default {
             this.$refs.loginFromRef.validate(async valid => {
                 //console.log(valid)
                 if (!valid) return;
-                const {data:res} = await this.$http.post("login" , this.loginForm );
+                const { data: res } = await this.$http.post("login", this.loginForm);
                 if (res.meta.status !== 200) return this.$message.error('登录失败！')
                 this.$message.success('登陆成功');
-            // 将登陆成功之后的 token ，保存在客户端的sessionStorage中
-            // 项目中出了登录意外的其他api接口，必须在登陆之后访问
-            // token 只应在当前网站打开期间生效，将 token 保存在sessionStoeage中
-            window.sessionStorage.setItem('token' ,res.data.token)
-            // 通过编程式导航跳转到后台主页，路由地址是 /home
-            this.$router.push('/home')
+                // 将登陆成功之后的 token ，保存在客户端的sessionStorage中
+                // 项目中出了登录意外的其他api接口，必须在登陆之后访问
+                // token 只应在当前网站打开期间生效，将 token 保存在sessionStoeage中
+                window.sessionStorage.setItem('token', res.data.token)
+                // 通过编程式导航跳转到后台主页，路由地址是 /home
+                this.$router.push('/home')
             })
         }
     }

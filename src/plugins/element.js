@@ -6,7 +6,7 @@ import { Form, FormItem, Button, Input,
     BreadcrumbItem, Card, Row,
     Col, Table, TableColumn, Switch,
     Tooltip, Pagination, Dialog,
-    MessageBox} from 'element-ui'
+    MessageBox, Tag, Tree, Select, Option} from 'element-ui'
 
 
 Vue.use(Button)
@@ -32,6 +32,10 @@ Vue.use(Switch)
 Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Select)
+Vue.use(Option)
 // 全局挂载
 Vue.prototype.$confirm = MessageBox.confirm
 Vue.prototype.$message = Message
